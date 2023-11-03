@@ -3,12 +3,11 @@ function solve(arr) {
     let odd = 0;//нечетно
 
     for (let num of arr) {
-        if (num % 2 === 0) {
-            even += num;
+        if (Number(num) % 2 === 0) {
+            even += Number(num);
         } else {
-            odd += num;
+            odd += Number(num);
         }
-
     }
 
     console.log(even - odd);
