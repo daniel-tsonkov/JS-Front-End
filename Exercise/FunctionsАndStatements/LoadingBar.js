@@ -1,6 +1,6 @@
 function solve(num) {
     let percantage = num / 10;
-    let leftPercantage = 10 - percantage;
+    let leftPercantage = Math.ceil(10 - percantage);
     if(leftPercantage !== 0) {
         console.log(`${num}% [${'%'.repeat(percantage)}${'.'.repeat(leftPercantage)}]\nStill loading...`)
     } else {
@@ -8,4 +8,4 @@ function solve(num) {
     }
 }
 
-solve(30);
+solve(27);
