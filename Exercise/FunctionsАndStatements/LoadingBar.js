@@ -5,7 +5,8 @@ function solve(num) {
         console.log(`${num}% [${'%'.repeat(percantage)}${'.'.repeat(leftPercantage)}]\nStill loading...`)
     } else {
         console.log('100% Complete!')
+        console.log("[%%%%%%%%%%]");
     }
 }
 
-solve(27);
+solve(100);
