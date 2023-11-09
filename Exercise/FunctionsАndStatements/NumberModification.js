@@ -1,5 +1,5 @@
 function solve(number) {
-    num = number.toString();
+    let num = number.toString();
     let average = num
         .split('')
         .map(Number)
@@ -16,4 +16,4 @@ function solve(number) {
     console.log(num);
 }
 
-solve(5835);
+solve(101);
