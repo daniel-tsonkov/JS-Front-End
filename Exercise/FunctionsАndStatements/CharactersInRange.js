@@ -2,6 +2,10 @@ function solve(firstChar, secondChar) {
     let myString = '';
     let firstCharAsNumber = firstChar.charCodeAt();
     let secondCharAsNumber = secondChar.charCodeAt();
+
+    /*let firstCharAsNumber = Math.min(firstChar.charCodeAt(), secondChar.charCodeAt());
+    let secondCharAsNumber =  Math.max(firstChar.charCodeAt(), secondChar.charCodeAt());*/
+
     if(firstCharAsNumber > secondCharAsNumber) {
         let temp = firstCharAsNumber;
         firstCharAsNumber = secondCharAsNumber;
