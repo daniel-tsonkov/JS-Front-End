@@ -1,4 +1,8 @@
 function solve(arr) {
+    /*input.forEach((employees) => {
+        console.log(`Name: ${employees} -- Personal Number: ${employees.length}`);
+    })*/
+
     const employees = arr.reduce((acc, curr) => {
         acc[curr] = curr.length;
         return acc;
