@@ -1,5 +1,13 @@
-function solve() {
-
+function solve(input) {
+    input.forEach(command => {
+if (command.includes("addMovie")) {
+    //console.log(command);
+}else if (command.includes("directedBy")) {
+    //console.log(command);
+}else if (command.includes("onDate")) {
+    console.log(command);
+};
+    });
 }
 
 solve([
@@ -11,5 +19,5 @@ solve([
     'Fast and Furious onDate 30.07.2018',
     'Batman onDate 01.08.2018',
     'Fast and Furious directedBy Rob Cohen'
-    ]
-    );
+]
+);
