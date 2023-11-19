@@ -6,7 +6,16 @@ function solve(input) {
         return acc;
     }, {});
 
+    words.forEach(element => {
+        if (wordOccurencies.hasOwnProperty(element)) {
+            wordOccurencies[element] += 1;
+        }
+    });
+
     console.log(wordOccurencies)
+    movies
+    .filter((m) => m.name && m.director && m.date)
+    .forEach((m) => console.log(JSON.stringify(m)));
 }
 
 solve([
