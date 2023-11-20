@@ -1,12 +1,23 @@
 function solve(input) {
     let heroes = [];
-    for (const heroData of heroes) {
-        let [name, level, items] = heroData.split(" - ");
+
+    for (const heroData of input) {
+        let [name, level, items] = heroData.split(' / ');
         let hero = {
-            name: name,
+            name,
             level: Number(level),
-            item: items
-        }
+            items: items
+        };
+
+        heroes.push(hero);
+    }
+    heroes.sort((a, b) => a.level - b.level);
+    //heroes.forEach(h => console.log(h));
+
+    for (const hero of heroes) {
+        console.log(`Hero: ${hero.name}`);
+        console.log(`level => ${hero.level}`);
+        console.log(`items => ${hero.items}`);
     }
 }
 
