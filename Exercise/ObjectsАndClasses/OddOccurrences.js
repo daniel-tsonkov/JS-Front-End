@@ -12,10 +12,16 @@ function solve(input) {
         } else {
             map.set(element, 1);
         }
-
-        
     });
-    console.log(map);
+
+    let arrResult = [];
+
+    map.forEach((value, key) => {
+        if(value % 2 !== 0) {
+            arrResult.push(key);
+        }
+    });
+    console.log(arrResult.join(' ')); //ВАЖНО!!!
 }
 
 solve('Java C# Php PHP Java PhP 3 C# 3 1 5 C#');
