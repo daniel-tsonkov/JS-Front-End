@@ -1,3 +1,5 @@
 function subtract() {
-    console.log('TODO:...');
+    const firstNumber = Number(document.getElementById('firstNumber').value);
+
+    console.log(firstNumber);
 }
