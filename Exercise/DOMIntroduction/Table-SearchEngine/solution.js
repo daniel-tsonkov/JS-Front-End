@@ -4,11 +4,13 @@ function solve() {
    let tableRowls = document.querySelectorAll('tbody tr');
 
    function onClick() {
-      for (const row of tableRowls) {
+      /*for (const row of tableRowls) {
          row.className = '';
-      }
+      }*/
       for (const row of tableRowls) {
-         row.classList.remove('select'); //Drug na`in za zachistwane na selekciata
+         //row.classList.remove('select'); //Drug na`in za zachistwane na selekciata
+         row.className = ''; //Oshte edin nachin za zachistwane na selekciata
+         
          if (input.value !== '' && row.innerHTML.includes(input.value)) {
             console.log('asd');
             row.className = 'select';
