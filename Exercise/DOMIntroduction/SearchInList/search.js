@@ -5,6 +5,10 @@ function search() {
    let matches = 0;
 
    for (const liItem of items) {
+      liItem.style.fontWeight = '';
+      liItem.style.textDecoration = '';
+   }
+   for (const liItem of items) {
       if (liItem.textContent.includes(myText)) {
          matches++;
          liItem.style.fontWeight = 'bold';
