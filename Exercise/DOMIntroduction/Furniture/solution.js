@@ -97,6 +97,7 @@ function createCellCreator() {
       row.appendChild(createCheckboxCell());
 
       return row;
+      //test
     },
   };
 }
