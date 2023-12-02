@@ -1,4 +1,4 @@
-function create(words) {
+/*function create(words) {
    const container = document.querySelector('#content');
 
    words.forEach(word => {
@@ -13,5 +13,24 @@ function create(words) {
       });
       container.appendChild(div);
    });
+}*/
 
+function create(words) {
+   let mainDiv = document.querySelector('#content');
+
+   for (const word of words) {
+      let div = document.createElement('div');
+      let paragraph = document.createElement('p');
+
+      paragraph.textContent = word;
+      paragraph.style.display = 'none';
+
+      div.appendChild(paragraph);
+      
+
+      div.addEventListener('click', () => {
+         paragraph.style.display = '';
+      })
+      mainDiv.appendChild(div);
+   }
 }
