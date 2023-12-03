@@ -7,7 +7,10 @@ function addItem() {
     option.setAttribute('value', valueInput.value);
 
     const select = document.querySelector('#menu');
-    select.appendChild(option);
+
+    if (textInput.value !== '' && valueInput.value !== '') {
+        select.appendChild(option);
+    }
 
     textInput.value = '';
     valueInput.value = '';
