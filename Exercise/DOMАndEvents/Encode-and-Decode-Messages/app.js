@@ -19,6 +19,8 @@ function encodeAndDecodeMessages() {
 
         decodeTextArea.value = newMessage;
         encodeTextArea.value = '';
+        //document.getElementsByTagName('button')[0].disabled = true;
+        document.getElementsByTagName('button')[1].disabled = false;
     }
 
     function decodeText() {
@@ -30,7 +32,9 @@ function encodeAndDecodeMessages() {
             newMessage += myChar;
         }
 
-        encodeTextArea.value = newMessage;
-        decodeTextArea.value = '';
+        //encodeTextArea.value = newMessage;
+        decodeTextArea.value = newMessage;
+        document.getElementsByTagName('button')[0].disabled = false;
+        document.getElementsByTagName('button')[1].disabled = true;
     }
 }
