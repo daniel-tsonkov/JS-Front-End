@@ -1,7 +1,7 @@
 function attachEventsListeners() {
     let [inputDistanceFiel, convertButton, outputDistanceFile] = document.getElementsByTagName('input');
 
-    let [inputUnitOption, outputUnitOption] = document.getElementsByTagName('option');
+    let [inputUnitOption, outputUnitOption] = document.getElementsByTagName('select');
 
     let convertionRates = {
         'km': 1000,
