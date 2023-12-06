@@ -1,20 +1,31 @@
 function solve() {
     const [generateTextAreas, buyTextArea] = Array.from(document.getElementsByTagName('textarea'));
-    const [generateBtn, buyBtn] = Array.from(documents.getElementsByTagName('button'));
+    const [generateBtn, buyBtn] = Array.from(document.getElementsByTagName('button'));
     const tbody = document.querySelector('.table > tbody');
 
     generateBtn.addEventListener('click', generateHandler);
+    buyBtn.addEventListener('click', )
 
     function generateHandler() {
         const data = JSON.parse(generateTextAreas.value);
-        console.log('asd');
 
         for (const { img, name, price, decFactor } of data) {
             const tableRow = createElement('tr', '', tbody);
             const firstColumnTd = createElement('td', '', tableRow);
-            const htmlImg = createElement('img', '', firstColumnTd, '', '', { src: img });
+            createElement('img', '', firstColumnTd, '', '', { src: img });
             const secondColumnTd = createElement('td', '', tableRow);
+            createElement('p', name, secondColumnTd);
+            const thirdColumnTd = createElement('td', '', tableRow);
+            createElement('p', price, thirdColumnTd);
+            const fourthColumnTd = createElement('td', '', tableRow);
+            createElement('p', decFactor, fourthColumnTd);
+            const fifthColumnTd = createElement('td', '', tableRow);
+            createElement('input', '', fifthColumnTd, '', '', {type: 'checkbox'})
         }
+    }
+
+    function buyHandler() {
+        
     }
 }
 
@@ -46,4 +57,6 @@ function createElement(type, content, parentNode, id, classes, attributes) {
             htmlElement.setAttribute(key, attributes[key]);
         }
     }
+
+    return htmlElement;
 }
