@@ -44,6 +44,7 @@ function solve() {
         buyTextArea.value += `Bought furniture: ${boughtItems.join(', ')}\n`;
         buyTextArea.value += `Total price: ${totalPrice.toFixed(2)}\n`;
         buyTextArea.value += `Average decoration factor: ${totalDecFactor / allCheckedInputs.length}`;
+        
     }
 
     function createElement(type, content, parentNode, id, classes, attributes) {
