@@ -24,8 +24,15 @@ function attachEvents() {
     refreshButton.addEventListener('click', async () => {
         const response = await fetch(baseURL)
         const messages = await response.json();
+        const messagesToDisplay = [];
 
-        console.log(messages);
+        for (const messageInfo of Object.values(messages)) {
+
+            messagesToDisplay.push(`${messageInfo.author}: ${messageInfo.content}`);
+
+        }
+
+        messagesTextArea.textContent = messagesToDisplay.join('\n');
     })
 }
 
