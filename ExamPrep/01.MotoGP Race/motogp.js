@@ -25,25 +25,31 @@ function solve(input) {
         const command = commandLine.shift();
 
         switch (command) {
-            case 'StopForFuel':
+            case 'StopForFuel': {
                 const riderName = commandLine.shift();
                 const minimumFuel = Number(commandLine.shift());
                 const changePosition = Number(commandLine.shift());
 
-                riders[riderName].position = changePosition;
-
                 if (riders[riderName].fuel < minimumFuel) {
+                    riders[riderName].position = changePosition;
                     console.log(`${riderName} stopped to refuel but lost his position, now he is ${changePosition}.`)
                 } else {
                     console.log(`${riderName} does not need to stop for fuel!`);
                 }
                 break;
-            case 'Overtaking':
-
+            }
+            case 'Overtaking': {
+            }
                 break;
-            case 'EngineFail':
+            case 'EngineFail': {
+                const riderName = commandLine.shift();
+                const lapsLeft = commandLine.shift();
 
+                delete riders[riderName];
+
+                console.log(`${riderName} is out of the race because of a technical issue, ${lapsLeft} laps before the finish.`)
                 break;
+            }
         }
         commandLine = input.shift();
     }
