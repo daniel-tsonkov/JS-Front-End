@@ -11,6 +11,7 @@ function solve(input) {
         //const position = riderDetails[2];
 
         const [name, fuel, position] = riderLine.split('|');
+        
     }
 }
 
