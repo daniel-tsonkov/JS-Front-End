@@ -11,7 +11,40 @@ function solve(input) {
         //const position = riderDetails[2];
 
         const [name, fuel, position] = riderLine.split('|');
-        
+
+        riders[name] = {
+            fuel: Number(fuel),
+            position: Number(position)
+        };
+    }
+
+    let commandLine = input.shift();
+
+    while (commandLine !== 'Finish') {
+        const command = commandLine.shift();
+
+        switch (command) {
+            case StopForFuel:
+                const riderName = commandLine.shift();
+                const minimumFuel = Number(commandLine.shift());
+                const changePosition = Number(commandLine.shift());
+
+                riders[riderName].position = changePosition;
+
+                if (riders[riderName].fuel < minimumFuel) {
+                    console.log(`${riderName} stopped to refuel but lost his position, now he is ${changePosition}.`)
+                } else {
+                    console.log(`${riderName} does not need to stop for fuel!`);
+                }
+                break;
+            case Overtaking:
+
+                break;
+            case EngineFail:
+
+                break;
+        }
+        commandLine = input.shift();
     }
 }
 
