@@ -21,10 +21,11 @@ function solve(input) {
     let commandLine = input.shift();
 
     while (commandLine !== 'Finish') {
+        commandLine = commandLine.split(' - ');
         const command = commandLine.shift();
 
         switch (command) {
-            case StopForFuel:
+            case 'StopForFuel':
                 const riderName = commandLine.shift();
                 const minimumFuel = Number(commandLine.shift());
                 const changePosition = Number(commandLine.shift());
@@ -37,10 +38,10 @@ function solve(input) {
                     console.log(`${riderName} does not need to stop for fuel!`);
                 }
                 break;
-            case Overtaking:
+            case 'Overtaking':
 
                 break;
-            case EngineFail:
+            case 'EngineFail':
 
                 break;
         }
