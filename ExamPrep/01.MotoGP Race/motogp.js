@@ -4,11 +4,6 @@ function solve(input) {
 
     for (let i = 0; i < riderCount.length; i++) {
         const riderLine = input.shift();
-        //const riderDetails = riderLine.split('|');
-
-        //const name = riderDetails[0];
-        //const fuel = riderDetails[1];
-        //const position = riderDetails[2];
 
         const [name, fuel, position] = riderLine.split('|');
 
@@ -42,7 +37,13 @@ function solve(input) {
                 const firstRider = commandLine.shift();
                 const secondRider = commandLine.shift();
 
-                if (riders[firstRider].position < riders[secondRider].position) {
+                const firstRiderPosition = riders[firstRider].position;
+                const secondRiderPosition = riders[secondRider].position;
+
+                if (firstRiderPosition < secondRiderPosition) {
+                    riders[firstRider].position = secondRiderPosition;
+                    riders[secondRider].position = firstRiderPosition;
+
                     console.log(`${firstRider} overtook ${secondRider}!`);
                 }
             }
@@ -58,6 +59,12 @@ function solve(input) {
             }
         }
         commandLine = input.shift();
+    }
+    {
+        for (const riderName in riders) {
+            console.log(riderName);
+            console.log(`  Final position: ${riders[riderName].position}`);
+        }
     }
 }
 
