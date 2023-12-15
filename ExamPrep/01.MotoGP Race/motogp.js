@@ -46,8 +46,9 @@ function solve(input) {
 
                     console.log(`${firstRider} overtook ${secondRider}!`);
                 }
-            }
                 break;
+            }
+                
             case 'EngineFail': {
                 const riderName = commandLine.shift();
                 const lapsLeft = commandLine.shift();
