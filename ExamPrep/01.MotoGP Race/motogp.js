@@ -39,6 +39,12 @@ function solve(input) {
                 break;
             }
             case 'Overtaking': {
+                const firstRider = commandLine.shift();
+                const secondRider = commandLine.shift();
+
+                if (riders[firstRider].position < riders[secondRider].position) {
+                    console.log(`${firstRider} overtook ${secondRider}!`);
+                }
             }
                 break;
             case 'EngineFail': {
